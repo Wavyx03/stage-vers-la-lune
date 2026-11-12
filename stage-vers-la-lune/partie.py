@@ -1,0 +1,37 @@
+import json
+
+import ages
+import carte
+import personne
+import ressources
+
+def sauver():
+    donnees = {
+        "gens": personne.gens,
+        "stock": ressources.stock,
+        "investi": ressources.investi,
+        "carte": carte.carte,
+        "age": ages.etat["age"],
+        "batiments": ages.batiments,
+    }
+    fichier = open("sauvegarde.json", "w")
+    json.dump(donnees, fichier)
+    fichier.close()
+    return "partie sauvée"
+
+def charger():
+    try:
+        fichier = open("sauvegarde.json")
+    except FileNotFoundError:
+        return "refus : aucune sauvegarde"
+    donnees = json.load(fichier)
+    fichier.close()
+    personne.gens.clear()
+    personne.gens.extend(donnees["gens"])
+    ressources.stock.update(donnees["stock"])
+    ressources.investi.update(donnees["investi"])
+    carte.carte.update(donnees["carte"])
+    ages.etat["age"] = donnees["age"]
+    ages.batiments.clear()
+    ages.batiments.extend(donnees["batiments"])
+    return "partie chargée"
