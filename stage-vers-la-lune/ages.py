@@ -50,3 +50,15 @@ def avancer():
         return "refus : on ne peut pas avancer"
     return f"âge : {etat['age']}"
 
+
+def resume():
+    return f"âge actuel : {etat['age']} | bâtiments : {', '.join(batiments) if batiments else 'aucun'}"
+
+
+def aide():
+    return (
+        "Âges du jeu : pierre -> fer -> vapeur -> reacteur.\n"
+        "Pour avancer, il faut construire les bâtiments nécessaires.\n"
+        "Les bâtiments utiles sont : forge, mine, reacteur."
+    )
+

@@ -35,3 +35,40 @@ def charger():
     ages.batiments.clear()
     ages.batiments.extend(donnees["batiments"])
     return "partie chargée"
+
+
+def reinitialiser():
+    personne.gens.clear()
+    personne.gens.extend([
+        {"nom": "ada", "lieu": "camp", "tache": "libre", "fatigue": 0, "embarque": False},
+        {"nom": "bo", "lieu": "camp", "tache": "libre", "fatigue": 0, "embarque": False},
+        {"nom": "abdoul", "lieu": "camp", "tache": "libre", "fatigue": 0, "embarque": False},
+    ])
+
+    ressources.stock.clear()
+    ressources.stock.update({
+        "nourriture": 30,
+        "bois": 0,
+        "pierre": 0,
+        "fer": 0,
+        "charbon": 0,
+        "noyau": 0,
+        "pierre_lune": 0,
+    })
+
+    ressources.investi.clear()
+    ressources.investi.update({"bois": 0})
+
+    carte.carte.clear()
+    carte.carte.update({
+        "camp": True,
+        "foret": False,
+        "carriere": False,
+        "filon": False,
+        "tourbiere": False,
+        "epave": False,
+    })
+
+    ages.etat["age"] = "pierre"
+    ages.batiments.clear()
+    return "partie réinitialisée"
