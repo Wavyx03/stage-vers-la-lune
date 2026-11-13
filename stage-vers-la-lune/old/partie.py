@@ -1,9 +1,9 @@
 import json
 
-import ages
-import carte
-import personne
-import ressources
+import old.ages as ages
+import old.carte as carte
+import old.personne as personne
+import old.ressources as ressources
 
 def sauver():
     donnees = {

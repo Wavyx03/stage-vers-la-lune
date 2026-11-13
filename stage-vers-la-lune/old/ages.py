@@ -1,5 +1,5 @@
-import carte
-import ressources
+import old.carte as carte
+import old.ressources as ressources
 
 etat = {"age": "pierre"}
 
@@ -61,4 +61,3 @@ def aide():
         "Pour avancer, il faut construire les bâtiments nécessaires.\n"
         "Les bâtiments utiles sont : forge, mine, reacteur."
     )
-

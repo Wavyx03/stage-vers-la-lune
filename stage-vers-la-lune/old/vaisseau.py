@@ -1,6 +1,6 @@
-import ages
-import personne
-import ressources
+import old.ages as ages
+import old.personne as personne
+import old.ressources as ressources
 
 def produire():
     stock = ressources.stock

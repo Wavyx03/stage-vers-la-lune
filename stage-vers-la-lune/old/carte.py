@@ -1,4 +1,4 @@
-import personne
+import old.personne as personne
 
 carte = {"camp": True, "foret": False, "carriere": False, "filon": False, "tourbiere": False, "epave": False}
 
@@ -32,5 +32,3 @@ def deplacer(nom, lieu):
         return "refus : lieu inconnu"
     p["lieu"] = lieu
     return f"{nom} va à {lieu}"
-
-     

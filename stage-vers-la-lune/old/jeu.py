@@ -1,9 +1,9 @@
-import ages
-import carte
-import partie
-import personne
-import ressources
-import vaisseau
+import old.ages as ages
+import old.carte as carte
+import old.partie as partie
+import old.personne as personne
+import old.ressources as ressources
+import old.vaisseau as vaisseau
 
 def jouer():
     while True:

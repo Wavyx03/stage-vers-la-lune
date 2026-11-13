@@ -1,4 +1,4 @@
-import personne
+import old.personne as personne
 
 stock = {"nourriture": 30, "bois": 0, "pierre": 0,
          "fer": 0, "charbon": 0, "noyau": 0, "pierre_lune": 0}
