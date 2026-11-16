@@ -54,6 +54,7 @@ def reinitialiser():
         "charbon": 0,
         "noyau": 0,
         "pierre_lune": 0,
+        "fer_lune": 0,
     })
 
     ressources.investi.clear()
@@ -67,6 +68,7 @@ def reinitialiser():
         "filon": False,
         "tourbiere": False,
         "epave": False,
+        "lune": False,
     })
 
     ages.etat["age"] = "pierre"

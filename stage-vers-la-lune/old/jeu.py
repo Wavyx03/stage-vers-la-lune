@@ -72,6 +72,10 @@ def jouer():
             print("  reinitialiser : remet la partie à zéro")
             print("  etat : affiche l'état de l'âge")
             print("  aide ages : affiche l'aide sur les âges")
+            print("  tomy : affiche le nom du développeur")
+            print("  mathieu : affiche le nom du développeur")
+            print("  quitter : quitte le jeu et sauvegarde la partie")
+            print("  aide : affiche cette aide")
 
         elif mot == "construire" and nb == 2:
             print(ages.construire(mots[1]))
