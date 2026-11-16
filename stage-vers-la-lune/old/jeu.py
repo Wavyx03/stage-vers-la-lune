@@ -7,21 +7,17 @@ import old.vaisseau as vaisseau
 
 def jouer():
     while True:
-        # On lit la ligne tapée, en minuscules et sans espaces autour
         ligne = input("> ").strip().lower()
-        # On coupe la ligne en mots : "affecter ada couper" -> ["affecter", "ada", "couper"]
         mots = ligne.split()
-        # Ligne vide : on recommence
         if len(mots) == 0:
             continue
-        mot = mots[0]   # le premier mot = la commande
-        nb = len(mots)  # le nombre de mots (pour vérifier qu'il ne manque rien)
+        mot = mots[0]
+        nb = len(mots)
 
         if ligne == "quitter":
             print("à bientôt")
             break
 
-        # Personnes
         if ligne == "equipe":
             print(personne.equipe())
         elif mot == "recruter" and nb == 2:
@@ -35,7 +31,6 @@ def jouer():
         elif mot == "embarquer" and nb == 2:
             print(vaisseau.embarquer(mots[1]))
 
-        # Terrain
         elif ligne == "explorer":
             print(carte.explorer(ressources.stock))
         elif ligne == "lieux":
@@ -78,7 +73,6 @@ def jouer():
             print("  etat : affiche l'état de l'âge")
             print("  aide ages : affiche l'aide sur les âges")
 
-        # Camp
         elif mot == "construire" and nb == 2:
             print(ages.construire(mots[1]))
         elif ligne == "avancer":
@@ -98,13 +92,11 @@ def jouer():
         elif ligne in ["aide ages", "aide_age", "aide-ages"]:
             print(ages.aide())
 
-        # secret
         elif ligne == "tomy":
             print("Devloppeur : Tomy")
         elif ligne == "mathieu":
             print("Devloppeur : Mathieu")
 
-        # Tout le reste
         else:
             print("refus : commande inconnue")
 
